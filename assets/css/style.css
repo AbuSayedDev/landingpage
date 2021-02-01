@@ -94,7 +94,14 @@ button:focus {
 
 
 /*-------------> navbar-wrapper <-------------*/
-
+.header-wrapper{
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    z-index: 99999;
+    background: #f3f3f3 none repeat scroll 0 0;
+    box-shadow: 0px 0px 21px 12px #7d7c7c54;
+}
 .navbar-wrapper {
     width: 100%;
     height: auto;
@@ -931,6 +938,45 @@ ul.navbar-nav .nav-item .nav-link:after {
     -webkit-box-shadow: 0px 15px 50px 0px rgb(115 115 115 / 34%);
     box-shadow: 0px 15px 50px 0px rgb(115 115 115 / 34%);
 }
+.testimonial-sub-heading{
+    position: absolute;
+    top: -36%;
+    text-align: center;
+    width: 100%;
+}
+
+.testimonial-sub-heading h6{
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 38px;
+    color: #FE7D0B;
+    text-transform: uppercase;
+    position: relative;
+}
+.testimonial-sub-heading h6::after{
+    width: 100px;
+    height: 2px;
+    background: #FE7D0B;
+    position: absolute;
+    top: 19px;
+    left: 25%;
+    content: " ";
+}
+.testimonial-sub-heading h6::before{
+    width: 100px;
+    height: 2px;
+    background: #FE7D0B;
+    position: absolute;
+    top: 19px;
+    right:25%;
+    content: " ";
+}
+.testimonial-sub-heading h1{
+    font-size: 40px;
+    font-weight: bold;
+    line-height: 24px;
+    color: #323C47;
+}
 
 .testimonial-wrapper {
     width: 100%;
@@ -1350,14 +1396,39 @@ ul.navbar-nav .nav-item .nav-link:after {
         font-weight: bold;
         line-height: 24px;
     }
+    .testimonial-sub-heading h6::after {
+        width: 130px;
+        top: 19px;
+        left: 30%;
+    }
+    .testimonial-sub-heading h6::before {
+        width: 130px;
+        top: 19px;
+        right: 30%;
+    }
 }
+@media (max-width: 1024px){
+    .testimonial-sub-heading h6::before {
+        right: 21%;
+    }
+    .testimonial-sub-heading h6::after {
+        left: 21%;
+    }
+}
+
 @media (max-width: 768px){
     .mobile-nav-wrapper {
         display: block;
     }
     .navbar {
     padding: 12px 1rem;
-}
+    }
+    .testimonial-sub-heading h6::before {
+        right: 11%;
+    }
+    .testimonial-sub-heading h6::after {
+        left: 11%;
+    }
 }
 @media (max-width: 768px) and (min-width: 540px) {
     .header-top {
@@ -1502,14 +1573,18 @@ ul.navbar-nav .nav-item .nav-link:after {
         margin: 0px 5px;
         padding: 3px 6px;
     }
-    .position-relative {
-        top: 60px;
-    }
+
     .testimonial-wrapper {
-        height: 703px;
+        height: 830px;
     }
     .testimonial-wrapper .slick-next {
         right: 0 !important;
+    }
+    .testimonial-sub-heading h6::before {
+        right: 20%;
+    }
+    .testimonial-sub-heading h6::after {
+        left: 20%;
     }
     .subscrive-content h2 {
         font-size: 16px;
@@ -1570,13 +1645,43 @@ ul.navbar-nav .nav-item .nav-link:after {
         padding: 60px 0px 0 0;
     }
     .testimonial-wrapper {
-        height: 650px;
+        height: 790px;
+    }
+    .testimonial-sub-heading {
+        width: 90%;
+    }
+    .testimonial-sub-heading h6::before {
+        right: 6%;
+    }
+    .testimonial-sub-heading h6::after {
+        left: 6%;
     }
 }
 
 @media (max-width: 375px) {
     .testimonial-wrapper {
-        height: 750px;
+        height: 880px;
+    }
+    .clients-heading h1, .meet-heading h1, .testimonial-heading h1 {
+        font-size: 35px;
+    }
+    .testimonial-sub-heading h6::before {
+        right: 7%;
+    }
+    .testimonial-sub-heading h6::after {
+        left: 7%;
+    }
+    .testimonial-sub-heading h1 {
+        font-size: 35px;
+    }
+    .testimonial-sub-heading {
+        top: -29%;
+    }
+    .testimonial-sub-heading h6::after {
+        width: 80px;
+    }
+    .testimonial-sub-heading h6::before {
+        width: 80px;
     }
 }
 
@@ -1628,7 +1733,17 @@ ul.navbar-nav .nav-item .nav-link:after {
         padding: 60px 0 0 0px;
     }
     .testimonial-wrapper {
-        height: 834px;
+        height: 980px;
+    }
+    .testimonial-sub-heading {
+        top: -26%;
+        width: 90%;
+    }
+    .testimonial-sub-heading h6::before {
+        right: 0%;
+    }
+    .testimonial-sub-heading h6::after {
+        left: 0%;
     }
     .meet-slider {
         padding-top: 0px !important;
@@ -1661,5 +1776,20 @@ ul.navbar-nav .nav-item .nav-link:after {
     }
     .banner-left-img {
         margin-top: 0;
+    }
+    .testimonial-wrapper {
+        height: 1144px;
+    }
+    .testimonial-sub-heading h1 {
+        font-size: 31px;
+    }
+    .testimonial-sub-heading {
+        top: -20%;
+    }
+    .testimonial-sub-heading h6::before {
+        width: 80px;
+    }
+    .testimonial-sub-heading h6::after {
+        width: 80px;
     }
 }
