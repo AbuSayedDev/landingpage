@@ -1455,6 +1455,13 @@ ul.navbar-nav .nav-item .nav-link:after {
     .testimonial-sub-heading h6::after {
         left: 11%;
     }
+    ul.navbar-nav .nav-item .nav-link:after {
+        height: 0px;
+    }
+    .navbar-nav .nav-item .nav-link:hover:after {
+        width: 100%;
+        background: none;
+    }
 }
 @media (max-width: 768px) and (min-width: 540px) {
     .header-top {
@@ -1469,13 +1476,6 @@ ul.navbar-nav .nav-item .nav-link:after {
     }
     .bg_header_content {
         padding: 0 0 36px 0;
-    }
-    ul.navbar-nav .nav-item .nav-link:after {
-        height: 0px;
-    }
-    .navbar-nav .nav-item .nav-link:hover:after {
-        width: 100%;
-        background: none;
     }
     .bg_header_btn{
         flex-direction: column;
