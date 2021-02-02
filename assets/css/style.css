@@ -1,8 +1,8 @@
-html,
-body {
+*{
     padding: 0;
     margin: 0;
 }
+
 
 body {
     font-size: 1rem;
@@ -49,8 +49,29 @@ button:focus {
 .btn-primary:focus {
     box-shadow: 0 0 0 0.2rem rgb(0 123 255 / 0%);
 }
-
-
+/* scrollTop */
+.scrollTop{
+    width: 50px;
+    height: 50px;
+    background-color: #1FDE82;
+    position: fixed;
+    right: 50px;
+    bottom: 40px;
+    text-align: center;
+    color: #fff;
+    line-height: 52px;
+    font-size: 20px;
+    cursor: pointer;
+    pointer-events: none;
+    z-index: 9999999;
+    opacity: 0;
+    transition: all .4s;
+}
+.scrollTop.active{
+    bottom: 40px;
+    pointer-events: auto;
+    opacity: 1;
+}
 /*=================================> 
         header-wrapper 
 <===================================*/
